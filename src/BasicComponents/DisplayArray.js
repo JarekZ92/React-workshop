@@ -11,8 +11,6 @@ const DisplayArray = (props) => (
 
             }
         </ul>
-
-
     </div>
 )
 

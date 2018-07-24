@@ -4,7 +4,7 @@ import BasicComponents from './BasicComponents/BasicComponents'
 
 const App = () => (
   <div>
-   <BasicComponents />
+  
   </div>
 
 )
