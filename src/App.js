@@ -1,15 +1,13 @@
 import React from 'react'
 
-import HelloWorld from './HelloWorld'
-import WhartReactRender from './WhartReactRender'
-import DisplayName from './DisplayName';
-import DisplayArray from './DisplayArray';
+import SingingButton from './SingingButton';
+import Border from './Border'
 
 const App = () => (
-  <div>
-    <DisplayArray listOfNames = {['Ala', 'Ela', 'Izabela']}
-    />
-  </div>
-)
+  <Border>
+    <SingingButton />
+   </Border>
 
-export default App
+    )
+    
+    export default App
