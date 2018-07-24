@@ -1,14 +1,10 @@
 import React from 'react'
 
-import SingingButtonWithBorder from './SingingButtonWithBorder'
+import BasicComponents from './BasicComponents/BasicComponents'
 
 const App = () => (
   <div>
-    <SingingButtonWithBorder
-      label={'Przycisk 1'}
-      sound={'La la la'}
-      makeSound={() => alert('Im from makeSound')}
-    />
+   <BasicComponents />
   </div>
 
 )
