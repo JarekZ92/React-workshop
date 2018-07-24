@@ -1,6 +1,7 @@
 //imports from npm packages
 import React from 'react'
 import ReactDOM from 'react-dom'
+import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
 
 //imports extermal resources
 import './index.css'
@@ -9,6 +10,8 @@ import './index.css'
 import App from './App'
 
 ReactDOM.render(
-<App />,
- document.getElementById('root')
-)
+    <MuiThemeProvider>
+        <App />
+    </MuiThemeProvider>,
+         document.getElementById('root')
+        )
