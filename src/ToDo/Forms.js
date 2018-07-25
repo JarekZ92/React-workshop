@@ -1,9 +1,15 @@
 import React from 'react'
 
-const Forms = (props) => (
-    <div>
+import PaperRefined from '../components/PaperRefined'
 
-    </div>
+const Forms = (props) => (
+    <PaperRefined>
+        <input
+            type={'text'}
+            value={props.newTaskText}
+        />
+        <button>Dodaj</button>
+    </PaperRefined>
 )
 
 export default Forms
