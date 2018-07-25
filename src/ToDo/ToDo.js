@@ -23,7 +23,7 @@ class ToDo extends React.Component {
             <div>
                 <Forms
                     newTaskText={this.state.newTaskText}
-                    onNewTaskTextChanged={this.onNewTaskTextChanged}
+                    onNewTaskTextChanged={this.onNewTaskTextChanged}  
                 />
                 <List
                     tasksList={this.state.tasks}
