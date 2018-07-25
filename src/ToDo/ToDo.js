@@ -5,8 +5,8 @@ import List from './List'
 class ToDo extends React.Component {
     state = {
         tasks: [
-            { isCompleted: false, text: 'Wynieś śmieci' },
-            { isCompleted: false, text: 'Zmyj gary' }
+            { isCompleted: false, text: 'Wynieś śmieci', key: '123' },
+            { isCompleted: false, text: 'Zmyj gary', key: '654' }
         ]
     }
 
