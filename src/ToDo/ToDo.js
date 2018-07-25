@@ -1,10 +1,21 @@
 import React from 'react'
 
+import List from './List'
+
 class ToDo extends React.Component {
+    state = {
+        tasks: [
+            { isCompleted: false, text: 'Wynieś śmieci' },
+            { isCompleted: false, text: 'Zmyj gary' }
+        ]
+    }
+
     render() {
         return (
             <div>
-                <h1>ToDo</h1>
+                <List
+                    tasksList={this.state.tasks}
+                />
             </div>
         )
     }
