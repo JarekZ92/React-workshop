@@ -5,7 +5,9 @@ import MenuItem from 'material-ui/MenuItem'
 
 
 const SideBarItem = (props) => (
-    <div>
+    <div 
+    onClick ={props.toggleSideBar}
+    >
         <Link
             to={props.to}
             style={{ textDecoration: 'none' }}
