@@ -4,23 +4,13 @@ import Drawer from 'material-ui/Drawer'
 import MenuItem from 'material-ui/MenuItem'
 
 class SideBar extends React.Component {
-    state = {
-        isOpen: true
-    }
-
-    toggleHandler = () => {
-        this.setState({
-            isOpen: !this.state.isOpen
-        })
-    }
-
     render() {
         return (
             <Drawer
-                open={this.state.isOpen}
+                open={this.props.isSideBarOpen}
             >
                 <MenuItem
-                    onClick={this.toggleHandler}
+                    onClick={this.props.toggleSideBar}
                 >
                     CLOSE
              </MenuItem>
