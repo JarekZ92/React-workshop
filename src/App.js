@@ -1,6 +1,6 @@
 import React from 'react'
 
-import { BrowserRouter as Router, Route} from 'react-router-dom'
+import { BrowserRouter as Router, Route } from 'react-router-dom'
 import AppBar from 'material-ui/AppBar'
 
 
@@ -8,7 +8,8 @@ import BasicComponents from './BasicComponents/BasicComponents'
 import Dashboard from './Dashboard'
 import PassingParameters from './PassingParameters'
 import SideBar from './SideBar'
-import Counter from './Counter';
+import Counter from './Counter'
+import ToDo from './ToDo'
 
 const App = () => (
   <div>
@@ -23,7 +24,8 @@ const App = () => (
         <Route path={'/dashboard'} component={Dashboard} />
         <Route path={'/basic-componets'} component={BasicComponents} />
         <Route path={'/passing-parameters/:parameterName'} component={PassingParameters} />
-        <Route path={'/Counter'} component={Counter} />
+        <Route path={'/Counter'} component={() => <Counter number={5} />} />
+        <Route path={'/toDo'} component={ToDo} />
       </div>
     </Router >
   </div >
