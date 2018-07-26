@@ -9,6 +9,7 @@ import PassingParameters from './Views/PassingParameters'
 import Counter from './Views/Counter'
 import ToDo from './Views/ToDo'
 import Navigation from './Views/Navigation'
+import FetchingRandomUsers from './Views/FetchingRandomUsers/FetchingRandomUsers'
 
 const App = () => (
   <div>
@@ -22,6 +23,7 @@ const App = () => (
         <Route path={'/passing-parameters/:parameterName'} component={PassingParameters} />
         <Route path={'/Counter'} component={() => <Counter number={5} />} />
         <Route path={'/toDo'} component={ToDo} />
+        <Route path={'/fetching-random-users'} component={FetchingRandomUsers} />
       </div>
     </Router >
   </div >

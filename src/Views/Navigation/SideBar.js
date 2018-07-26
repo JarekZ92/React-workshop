@@ -36,6 +36,11 @@ class SideBar extends React.Component {
                     label={'ToDo'}
                     toggleSideBar={this.props.toggleSideBar}
                 />
+                 <SideBarItem
+                    to={'/fetching-random-users'}
+                    label={'FetchingRandomUsers'}
+                    toggleSideBar={this.props.toggleSideBar}
+                />
             </Drawer>
         )
     }
