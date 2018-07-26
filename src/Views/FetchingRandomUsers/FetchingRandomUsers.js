@@ -1,25 +1,39 @@
 import React from 'react'
 
+import User from './User'
+import PaperRefined from '../../components/PaperRefined'
+
 class FetchingRandomUsers extends React.Component {
     state = {
         randomUserData: null
     }
 
     componentDidMount() {
-        fetch('https://randomuser.me/api')
+        fetch('https://randomuser.me/api?results=10')
             .then(response => response.json())
             .then(dataFromResponse => {
                 this.setState({
-                    randomUserData: dataFromResponse
+                    randomUserData: dataFromResponse.results
                 })
             })
     }
 
     render() {
+        JSON.stringify()
         return (
-            <div>
-                {JSON.stringify(this.state.randomUserData)}
-            </div>
+            <PaperRefined>
+                {
+                    this.state.randomUserData
+                    &&
+                    this.state.randomUserData
+                        .map(user => (
+                            <User
+                                user={user}
+                                key={user.login.uuid}
+                            />
+                        ))
+                }
+            </PaperRefined>
         )
     }
 }
