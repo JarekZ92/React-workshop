@@ -10,6 +10,7 @@ const Forms = (props) => (
         <TextField
             type={'text'}
             value={props.newTaskText}
+            fullWidth={true}
             onChange={props.onNewTaskTextChanged}
         />
         <RaisedButton

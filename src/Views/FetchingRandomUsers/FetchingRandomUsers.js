@@ -2,10 +2,12 @@ import React from 'react'
 
 import User from './User'
 import PaperRefined from '../../components/PaperRefined'
+import Search from './Search'
 
 class FetchingRandomUsers extends React.Component {
     state = {
-        randomUserData: null
+        randomUserData: null,
+        searchPrase: ''
     }
 
     componentDidMount() {
@@ -18,22 +20,39 @@ class FetchingRandomUsers extends React.Component {
             })
     }
 
+    searchPhraseChangeHandler = (even) => {
+        this.setState({
+            searchPrase: even.target.value
+        })
+    }
+
     render() {
-        JSON.stringify()
+        const userLists = (
+            this.state.randomUserData
+            &&
+            this.state.randomUserData
+                .map(user => (
+                    <User
+                        key={user.login.uuid}
+                        user={user}
+                    />
+                ))
+        )
+
         return (
-            <PaperRefined>
-                {
-                    this.state.randomUserData
-                    &&
-                    this.state.randomUserData
-                        .map(user => (
-                            <User
-                                user={user}
-                                key={user.login.uuid}
-                            />
-                        ))
-                }
-            </PaperRefined>
+            <div>
+                <PaperRefined>
+                    <Search
+                        searchPhrase={this.state.searchPrase}
+                        searchPhraseChangeHandler={this.searchPhraseChangeHandler}
+                    />
+                </PaperRefined>
+                <PaperRefined>
+                    {
+                        userLists
+                    }
+                </PaperRefined>
+            </div>
         )
     }
 }
