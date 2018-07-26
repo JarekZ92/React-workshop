@@ -3,12 +3,12 @@ import React from 'react'
 import { BrowserRouter as Router, Route } from 'react-router-dom'
 
 
-import BasicComponents from './BasicComponents/BasicComponents'
-import Dashboard from './Dashboard'
-import PassingParameters from './PassingParameters'
-import Counter from './Counter'
-import ToDo from './ToDo'
-import Navigation from './Navigation';
+import BasicComponents from './Views/BasicComponents/BasicComponents'
+import Dashboard from './Views/Dashboard'
+import PassingParameters from './Views/PassingParameters'
+import Counter from './Views/Counter'
+import ToDo from './Views/ToDo'
+import Navigation from './Views/Navigation'
 
 const App = () => (
   <div>

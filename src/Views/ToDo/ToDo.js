@@ -7,10 +7,23 @@ class ToDo extends React.Component {
     state = {
         tasks: [
             { isCompleted: false, text: 'Wynieś śmieci', key: '123' },
-            { isCompleted: false, text: 'Zmyj gary', key: '654' }
+            { isCompleted: false, text: 'Zmyj naczynia', key: '654' }
         ],
         newTaskText: ''
     }
+
+    componentDidMount() {
+        const lastState = JSON.parse(localStorage.getItem('jfddl5-app-counter-state'))
+
+        if (lastState === null) return
+
+        this.setState(lastState)
+    }
+
+    componentWillUnmount() {
+        localStorage.setItem('jfddl5-app-counter-state', JSON.stringify(this.state))
+    }
+
 
     onNewTaskTextChanged = (event) => {
         this.setState({
