@@ -9,7 +9,7 @@ class ToDo extends React.Component {
             { isCompleted: false, text: 'Wynieś śmieci', key: '123' },
             { isCompleted: false, text: 'Zmyj gary', key: '654' }
         ],
-        newTaskText: 'ala'
+        newTaskText: ''
     }
 
     onNewTaskTextChanged = (event) => {
@@ -18,12 +18,29 @@ class ToDo extends React.Component {
         })
     }
 
+    onAddNewTaskClickHandler = (newTaskText) => {
+        if (this.state.newTaskText === '') {
+            return
+        }
+        this.setState({
+            tasks: this.state.tasks.concat(
+                {
+                    isCompleted: false,
+                    text: this.state.newTaskText,
+                    key: Date.now()
+                }
+            ),
+            newTaskText: ''
+        })
+    }
+
     render() {
         return (
             <div>
                 <Forms
                     newTaskText={this.state.newTaskText}
-                    onNewTaskTextChanged={this.onNewTaskTextChanged}  
+                    onNewTaskTextChanged={this.onNewTaskTextChanged}
+                    onAddNewTaskClickHandler={this.onAddNewTaskClickHandler}
                 />
                 <List
                     tasksList={this.state.tasks}
